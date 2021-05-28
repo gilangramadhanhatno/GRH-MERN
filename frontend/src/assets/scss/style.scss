@@ -50,3 +50,20 @@
 // Utilities
 @import "utilities/api";
 // scss-docs-end import-stack
+
+// My SCSS
+body {
+  background-color: #f6edea;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+}
+
+.brand-text-icon {
+  font-family: "Lora";
+  font-weight: 500;
+  font-size: 24px;
+  color: $primary;
+}
