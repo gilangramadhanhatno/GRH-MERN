@@ -1,53 +1,19 @@
 {
-  "product": [
+  "bestSeller": [
     {
       "_id": "asd1293uasdads1",
-      "name": "White Pure",
-      "imageUrl": "/images/product/white-pure/p",
-      "price": "89",
-      "rate": 4.75
+      "name": "MAXMARA",
+      "imageUrl": "images/best-seller/maxmara/p2.png"
     },
     {
       "_id": "asd1293uasdads2",
-      "name": "Jeans Pubb",
-      "imageUrl": "/images/product/jeans-pubb/p",
-      "price": "78",
-      "rate": 4.5
+      "name": "JEANS PUBB",
+      "imageUrl": "images/best-seller/jeans-pubb/p.png"
     },
     {
       "_id": "asd1293uasdads3",
-      "name": "Maxmara",
-      "imageUrl": "/images/product/maxmara/p",
-      "price": "99",
-      "rate": 4.75
-    },
-    {
-      "_id": "asd1293uasdads4",
-      "name": "Jung Hook Sie",
-      "imageUrl": "/images/product/sabyan-gamis/p",
-      "price": "80",
-      "rate": 4.55
-    },
-    {
-      "_id": "asd1293uasdads5",
-      "name": "White Pure",
-      "imageUrl": "/images/product/white-pure/p3",
-      "price": "85",
-      "rate": 4.55
-    },
-    {
-      "_id": "asd1293uasdads6",
-      "name": "Jeans Pubb",
-      "imageUrl": "/images/product/jeans-pubb/p3",
-      "price": "88",
-      "rate": 4.5
-    },
-    {
-      "_id": "asd1293uasdads7",
-      "name": "Maxmara",
-      "imageUrl": "/images/product/maxmara/p3",
-      "price": "98",
-      "rate": 4
+      "name": "WHITE PURE",
+      "imageUrl": "images/best-seller/white-pure/p.png"
     }
   ]
 }

@@ -19,6 +19,7 @@
 @import "images";
 @import "containers";
 @import "grid";
+@import "container-grid";
 @import "tables";
 @import "forms";
 @import "buttons";
@@ -116,5 +117,91 @@ a {
   }
   h1 {
     padding-top: 100px;
+  }
+}
+
+// masing-masing section
+section {
+  margin-bottom: 70px;
+}
+
+// handle img
+.img-cover {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.img-contain {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+
+// Best Seller
+.card {
+  height: 100%;
+
+  .img-wrapper {
+    height: 100%;
+    margin-bottom: 0;
+    border-radius: 0.9375rem;
+    overflow: hidden;
+  }
+
+  &.card-featured {
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+    background-color: #e1d3ce;
+    &:after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transform: scale(1.1);
+      transition: 0.5s transfrom ease-in-out;
+      z-index: -1;
+    }
+
+    .img-wrapper {
+      z-index: 1;
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      transform: scale(1.1);
+      transition: all 0.25s transfrom ease-in-out;
+    }
+
+    &:hover {
+      &:after {
+        transform: scale(1);
+      }
+      .img-wrapper {
+        transition: all 0.3s ease-in-out;
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.meta-wrapper {
+  padding: 0 34.5%;
+  z-index: 4;
+  color: $white;
+  transform: translateY(0);
+  transition: 0.3s transform ease-in-out;
+  h5 {
+    color: #000;
+    font-size: 1.125rem;
+    transition: all 3s ease-in-out;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
