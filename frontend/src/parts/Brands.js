@@ -8,7 +8,7 @@ export default function Brands(props) {
       <div className="container-grid">
         {props.data.map((brand) => {
           return (
-            <div className="brand item column-3 mt-5">
+            <div key={`brand-${brand._id}`} className="brand item column-3 mt-5">
               <img src={brand.imageUrl} alt={brand.name} />
             </div>
           );

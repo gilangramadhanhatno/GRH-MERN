@@ -3,6 +3,7 @@ import Header from "parts/Header";
 import Hero from "parts/Hero";
 import Product from "parts/Product";
 import Brands from "parts/Brands";
+import Footer from "parts/Footer";
 
 import landingPage from "json/landingPage.json";
 
@@ -18,6 +19,7 @@ export default class LandingPage extends Component {
         <Hero refProduct={this.refProduct} />
         <Product refProduct={this.refProduct} data={landingPage.product} />
         <Brands data={landingPage.brand} />
+        <Footer />
       </>
     );
   }

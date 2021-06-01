@@ -27,18 +27,22 @@
   ],
   "brand": [
     {
+      "_id": 1,
       "name": "Channel",
       "imageUrl": "images/brands/cc.png"
     },
     {
+      "_id": 2,
       "name": "Nike",
       "imageUrl": "images/brands/nike.png"
     },
     {
+      "_id": 3,
       "name": "Pull & Bear",
       "imageUrl": "images/brands/pnb.png"
     },
     {
+      "_id": 4,
       "name": "Uniqlo",
       "imageUrl": "images/brands/uniqlo.png"
     }
