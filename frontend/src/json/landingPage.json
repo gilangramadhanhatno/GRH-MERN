@@ -1,19 +1,28 @@
 {
-  "bestSeller": [
+  "product": [
     {
       "_id": "asd1293uasdads1",
-      "name": "MAXMARA",
-      "imageUrl": "images/best-seller/maxmara/p2.png"
+      "name": "Maxmara",
+      "imageUrl": "images/product/product-1.jpg",
+      "price": 59
     },
     {
       "_id": "asd1293uasdads2",
-      "name": "JEANS PUBB",
-      "imageUrl": "images/best-seller/jeans-pubb/p.png"
+      "name": "Kebaya",
+      "imageUrl": "images/product/product-2.jpg",
+      "price": 49
     },
     {
       "_id": "asd1293uasdads3",
-      "name": "WHITE PURE",
-      "imageUrl": "images/best-seller/white-pure/p.png"
+      "name": "White Pure",
+      "imageUrl": "images/product/product-3.jpg",
+      "price": 65
+    },
+    {
+      "_id": "asd1293uasdads4",
+      "name": "Baju Kurung",
+      "imageUrl": "images/product/product-4.jpg",
+      "price": 89
     }
   ]
 }

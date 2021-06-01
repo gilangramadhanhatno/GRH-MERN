@@ -3,24 +3,25 @@ import Button from "elements/Button/Button";
 
 import "assets/scss/style.scss";
 
-export default function BestSeller(props) {
+export default function Product(props) {
   return (
     <section className="container">
-      <h4 className="mb-3">Best Seller</h4>
+      <h4 className="mb-3 title-product">Product</h4>
       <div className="container-grid">
-        {props.data.map((bestSeller) => {
+        {props.data.map((product) => {
           return (
-            <div className="item column-4 row-2">
-              <Button type="link" href={`/details/${bestSeller._id}`}>
+            <div className="item column-3 row-2">
+              <Button type="link" href={`/details/${product._id}`}>
                 <div className="card card-featured">
                   <figure className="img-wrapper">
-                    <img src={bestSeller.imageUrl} alt={bestSeller.name} className="img-contain" />
+                    <img src={product.imageUrl} alt={product.name} className="img-contain" />
                   </figure>
                 </div>
               </Button>
               <div className="meta-wrapper text-center mt-3">
-                <Button type="link" className="streched-link d-block text-white" href={`/details/${bestSeller._id}`}>
-                  <h5>{bestSeller.name}</h5>
+                <Button type="link" className="streched-link d-block text-white" href={`/details/${product._id}`}>
+                  <h5>{product.name}</h5>
+                  <p>${product.price}</p>
                 </Button>
               </div>
             </div>

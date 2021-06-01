@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "parts/Header";
 import Hero from "parts/Hero";
-import BestSeller from "parts/BestSeller";
+import Product from "parts/Product";
 
 import landingPage from "json/landingPage.json";
 
@@ -11,7 +11,7 @@ export default class LandingPage extends Component {
       <>
         <Header />
         <Hero />
-        <BestSeller data={landingPage.bestSeller} />
+        <Product data={landingPage.product} />
       </>
     );
   }
