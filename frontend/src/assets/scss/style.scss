@@ -191,7 +191,7 @@ section {
 }
 
 .meta-wrapper {
-  padding: 0 33%;
+  padding: 0 30%;
   z-index: 4;
   transform: translateY(0);
   transition: 0.3s transform ease-in-out;
@@ -207,6 +207,7 @@ section {
   p {
     color: #000;
     font-weight: 700;
+    margin-top: -10px;
   }
 }
 
