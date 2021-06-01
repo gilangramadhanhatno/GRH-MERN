@@ -5,12 +5,12 @@ import "assets/scss/style.scss";
 
 export default function Product(props) {
   return (
-    <section className="container">
+    <section className="container" ref={props.refProduct}>
       <h4 className="mb-3 title-product">Product</h4>
       <div className="container-grid">
         {props.data.map((product) => {
           return (
-            <div className="item column-3 row-2">
+            <div key={`product-${product._id}}`} className="item column-3 row-2">
               <Button type="link" href={`/details/${product._id}`}>
                 <div className="card card-featured">
                   <figure className="img-wrapper">

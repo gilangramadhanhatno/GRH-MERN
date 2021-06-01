@@ -4,6 +4,13 @@ import ImageHero from "assets/images/hero-image.jpg";
 import Button from "elements/Button/Button";
 
 export default function Hero(props) {
+  function showProduct() {
+    window.scrollTo({
+      top: props.refProduct.current.offsetTop - 30,
+      behavior: "smooth",
+    });
+  }
+
   return (
     <section className="hero-section">
       <div className="row align-items-center">
@@ -20,7 +27,9 @@ export default function Hero(props) {
               With our variety of styles.Fabrics and trims, let us help <br />
               you design a one-of-a-kind outfit
             </p>
-            <Button className="btn">Get It Now</Button>
+            <Button className="btn" onClick={showProduct}>
+              Get It Now
+            </Button>
           </div>
         </div>
       </div>

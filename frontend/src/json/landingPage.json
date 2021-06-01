@@ -24,5 +24,23 @@
       "imageUrl": "images/product/product-4.jpg",
       "price": 89
     }
+  ],
+  "brand": [
+    {
+      "name": "Channel",
+      "imageUrl": "images/brands/cc.png"
+    },
+    {
+      "name": "Nike",
+      "imageUrl": "images/brands/nike.png"
+    },
+    {
+      "name": "Pull & Bear",
+      "imageUrl": "images/brands/pnb.png"
+    },
+    {
+      "name": "Uniqlo",
+      "imageUrl": "images/brands/uniqlo.png"
+    }
   ]
 }
