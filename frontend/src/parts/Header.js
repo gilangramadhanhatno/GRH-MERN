@@ -5,7 +5,23 @@ import Fade from "react-reveal/Fade";
 
 import IconKerangjang from "assets/images/icon/icon_keranjang.svg";
 
-export default function Header() {
+export default function Header(props) {
+  if (props.isCentered) {
+    return (
+      <Fade>
+        <header className="spacing-sm">
+          <div className="container">
+            <nav className="navbar navba-expand-lg">
+              <Button className="brand-text-icon mx-auto" href="/" type="link">
+                GRH
+              </Button>
+            </nav>
+          </div>
+        </header>
+      </Fade>
+    );
+  }
+
   return (
     <Fade>
       <header className="spacing-sm">

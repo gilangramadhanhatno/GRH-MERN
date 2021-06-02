@@ -12,6 +12,12 @@ export default class LandingPage extends Component {
     super(props);
     this.refProduct = React.createRef();
   }
+
+  componentDidMount() {
+    window.title = "GRH | Home";
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <>
