@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import Header from "parts/Header";
 import PageDetailTitle from "parts/PageDetailTitle";
+import FeaturedDetails from "parts/FeaturedDetails";
+import BookingForm from "parts/BookingForm";
+
+import ItemDetails from "json/itemDetails.json";
 
 export default class DetailsPage extends Component {
   componentDidMount() {
@@ -18,6 +22,16 @@ export default class DetailsPage extends Component {
       <>
         <Header isCentered {...this.props} />
         <PageDetailTitle breadcrumb={breadcrumb} />
+        <section className="container">
+          <div className="row">
+            <div className="col-7">
+              <FeaturedDetails data={ItemDetails} />
+            </div>
+            <div className="col">
+              <BookingForm itemDetails={ItemDetails} />
+            </div>
+          </div>
+        </section>
       </>
     );
   }

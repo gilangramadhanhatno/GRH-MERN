@@ -1,0 +1,20 @@
+{
+  "_id": "asd1293uasdads1",
+  "name": "White Pure",
+  "imageUrl": "/images/product/product-1.jpg",
+  "price": "59",
+  "jenisBahan": [
+    {
+      "_id": "asd1293uasdads1",
+      "bahan": "Catton"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "bahan": "Sifon"
+    },
+    {
+      "_id": "asd1293uasdads1",
+      "bahan": "Payet"
+    }
+  ]
+}
