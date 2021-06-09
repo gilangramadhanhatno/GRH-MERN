@@ -3,6 +3,7 @@ import Header from "parts/Header";
 import PageDetailTitle from "parts/PageDetailTitle";
 import FeaturedDetails from "parts/FeaturedDetails";
 import BookingForm from "parts/BookingForm";
+import Footer from "parts/Footer";
 
 import ItemDetails from "json/itemDetails.json";
 
@@ -32,6 +33,7 @@ export default class DetailsPage extends Component {
             </div>
           </div>
         </section>
+        <Footer />
       </>
     );
   }

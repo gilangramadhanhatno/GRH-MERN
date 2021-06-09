@@ -3,9 +3,11 @@ import { withRouter } from "react-router-dom";
 
 import propTypes from "prop-types";
 
-import Button from "elements/Button/Button";
-import InputNumber from "elements/Form/InputNumber/InputNumber";
+import SelectBahan from "elements/Form/SelectBahan/SelectBahan";
 import InputDate from "elements/Form/InputDate/InputDate";
+import InputNumber from "elements/Form/InputNumber/InputNumber";
+
+import Button from "elements/Button/Button";
 
 import "assets/scss/style.scss";
 
@@ -19,6 +21,7 @@ class BookingForm extends Component {
           selectDate: new Date(),
           key: "selection",
         },
+        selectBahan: "Select Bahan",
       },
     };
   }
@@ -57,7 +60,12 @@ class BookingForm extends Component {
           ${itemDetails.price} <span className="font-weight-light">per Baju</span>
         </h5>
 
-        <label htmlFor="date">Pilih Tanggal Janji</label>
+        <label htmlFor="bahan">Pilih Bahan</label>
+        <SelectBahan name="bahan" value={data.selectBahan} onChange={this.updateData} />
+
+        <label htmlFor="date" className="mt-2">
+          Pilih Tanggal Janji
+        </label>
         <InputDate onChange={this.updateData} name="date" value={data.date} />
 
         <label htmlFor="duration" className="mt-2">
