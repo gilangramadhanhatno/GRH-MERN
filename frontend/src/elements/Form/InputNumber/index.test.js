@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import InputNumber from "./InputNumber";
+import InputNumber from ".";
 
 class TestInput extends React.Component {
   state = {

@@ -2,7 +2,7 @@
   "product": [
     {
       "_id": "asd1293uasdads1",
-      "name": "Maxmara",
+      "name": "White Pure",
       "imageUrl": "images/product/product-1.jpg",
       "price": 59
     },
@@ -14,7 +14,7 @@
     },
     {
       "_id": "asd1293uasdads3",
-      "name": "White Pure",
+      "name": "Maxmara",
       "imageUrl": "images/product/product-3.jpg",
       "price": 65
     },

@@ -3,13 +3,9 @@ import { withRouter } from "react-router-dom";
 
 import propTypes from "prop-types";
 
-import SelectBahan from "elements/Form/SelectBahan/SelectBahan";
-import InputDate from "elements/Form/InputDate/InputDate";
-import InputNumber from "elements/Form/InputNumber/InputNumber";
+import { InputDate, InputNumber, SelectBahan } from "elements/Form";
 
-import Button from "elements/Button/Button";
-
-import "assets/scss/style.scss";
+import Button from "elements/Button";
 
 class BookingForm extends Component {
   constructor(props) {
@@ -26,12 +22,12 @@ class BookingForm extends Component {
     };
   }
 
-  updateData = (e) => {
+  updateData = (event) => {
     this.setState({
       ...this.state,
       data: {
         ...this.state.data,
-        [e.target.name]: e.target.value,
+        [event.target.name]: event.target.value,
       },
     });
   };
@@ -43,7 +39,6 @@ class BookingForm extends Component {
       duration: data.duration,
       date: {
         selectDate: data.date.selectDate,
-        endDate: data.date.endDate,
       },
     });
     this.props.history.push("/checkout");
@@ -55,7 +50,8 @@ class BookingForm extends Component {
 
     return (
       <div className="form-booking card bordered" style={{ padding: "60px 80px" }}>
-        <h4 className="mb-3">Start Booking</h4>
+        <h3 className="mb-3">Start Booking</h3>
+        <h4>{itemDetails.name}</h4>
         <h5 className="h2 price mb-4 font-weight-bold">
           ${itemDetails.price} <span className="font-weight-light">per Baju</span>
         </h5>

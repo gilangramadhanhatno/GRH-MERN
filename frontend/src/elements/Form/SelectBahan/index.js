@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import "./SelectBahan.scss";
+import "./index.scss";
 
 export default function SelectBahan(props) {
   const [bahanState, setBahanState] = useState("Pilih Bahan");

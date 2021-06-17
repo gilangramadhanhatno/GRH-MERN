@@ -1,9 +1,9 @@
 import React from "react";
 
 import propTypes from "prop-types";
-import Button from "elements/Button/Button";
+import Button from "elements/Button";
 
-import "./Breadcrumb.scss";
+import "./index.scss";
 
 export default function Breadcrumb(props) {
   const className = ["breadcrumb", props.className];

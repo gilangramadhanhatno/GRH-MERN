@@ -1,7 +1,9 @@
 import React, { Component } from "react";
-import InputNumber from "elements/Form/InputNumber/InputNumber";
-import InputDate from "elements/Form/InputDate/InputDate";
-import SelectBahan from "elements/Form/SelectBahan/SelectBahan";
+
+import { InputNumber, InputDate, SelectBahan } from "elements/Form";
+// import InputNumber from "elements/Form/InputNumber/InputNumber";
+// import InputDate from "elements/Form/InputDate";
+// import SelectBahan from "elements/Form/SelectBahan/SelectBahan";
 
 import itemDetails from "json/itemDetails.json";
 

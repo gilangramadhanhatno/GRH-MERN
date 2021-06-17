@@ -1,7 +1,7 @@
 import React from "react";
 
 import ImageHero from "assets/images/hero-image.jpg";
-import Button from "elements/Button/Button";
+import Button from "elements/Button";
 
 export default function Hero(props) {
   function showProduct() {

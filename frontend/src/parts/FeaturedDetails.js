@@ -6,7 +6,7 @@ export default function FeaturedDetails({ data }) {
       <div className="row featured">
         <div className="col">
           <div className="featured-img">
-            <img src={data.imageUrl} alt="" />
+            <img src={data.imageUrls[0].url} alt="" />
           </div>
         </div>
       </div>

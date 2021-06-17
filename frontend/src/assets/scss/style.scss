@@ -54,7 +54,6 @@
 
 // My SCSS
 body {
-  background-color: #f6edea;
   overflow-x: hidden;
 }
 
@@ -73,6 +72,7 @@ a {
 
 header {
   border-bottom: 1px solid #cccccc;
+  background-color: #f6edea;
 }
 
 // Hero
@@ -179,7 +179,6 @@ section {
       }
     }
   }
-  // background-color: #f6edea;
 
   .img-wrapper {
     height: 100%;
@@ -283,7 +282,6 @@ footer {
   }
 
   .list-group-item {
-    background-color: #f6edea;
     border: 0;
     padding: 0;
     &:hover {

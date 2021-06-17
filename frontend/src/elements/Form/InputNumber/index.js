@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import propTypes from "prop-types";
-import "./InputNumber.scss";
+import "./index.scss";
 
 export default function Number(props) {
   const { value, placeholder, name, min, max, prefix } = props;

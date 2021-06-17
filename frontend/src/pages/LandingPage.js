@@ -21,7 +21,7 @@ export default class LandingPage extends Component {
   render() {
     return (
       <>
-        <Header />
+        <Header {...this.props} />
         <Hero refProduct={this.refProduct} />
         <Product refProduct={this.refProduct} data={landingPage.product} />
         <Brands data={landingPage.brand} />

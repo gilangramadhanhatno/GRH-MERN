@@ -1,6 +1,6 @@
 import React from "react";
 import BrandIcon from "parts/IconText";
-import Button from "elements/Button/Button";
+import Button from "elements/Button";
 
 import IconKerangjang from "assets/images/icons/icon_keranjang.svg";
 

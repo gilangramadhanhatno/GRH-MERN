@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 
-import "./InputDate.scss";
+import "./index.scss";
 import "react-datepicker/dist/react-datepicker.css";
 
 import iconCalendar from "assets/images/icons/icon-calendar.svg";
