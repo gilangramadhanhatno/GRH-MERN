@@ -11,7 +11,7 @@ export default function Header(props) {
         <div className="container">
           <nav className="navbar navba-expand-lg">
             <Button className="brand-text-icon mx-auto" href="/" type="link">
-              GRH
+              SetiawanStore
             </Button>
           </nav>
         </div>
