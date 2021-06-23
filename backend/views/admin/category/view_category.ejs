@@ -12,10 +12,10 @@
       <!-- Begin Page Content -->
       <div class="container-fluid">
         <!-- Page Heading -->
-        <h1 class="h3 mb-4 text-gray-800">Product</h1>
+        <h1 class="h3 mb-4 text-gray-800">Category</h1>
         <!-- End Heading -->
 
-        <%- include("table_product.ejs") %>
+        <%- include("table_category.ejs") %>
       </div>
       <!-- /.container-fluid -->
     </div>
@@ -51,4 +51,14 @@
   </div>
 </div>
 
-<%- include("../../partials/js.ejs") %>
+<%- include("add_modal_category.ejs") %> <%- include("edit_modal_category.ejs") %> <%- include("../../partials/js.ejs") %>
+
+<script>
+  $("#dataTable").on("click", ".button-update", function () {
+    let id = $(this).data("id");
+    let name = $(this).data("name");
+    $("#edit-modal").modal("show");
+    $(".id").val(id);
+    $(".name").val(name);
+  });
+</script>
