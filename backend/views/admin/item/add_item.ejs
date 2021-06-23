@@ -14,7 +14,9 @@
           <label for="categoryId">Category</label>
           <select class="form-control" name="categoryId" id="categoryId">
             <option value="">--- Category ---</option>
-            <option value=""></option>
+            <% for(let i = 0; i < category.length; i++) { %>
+            <option value="<%= category[i].id %>"><%= category[i].name %></option>
+            <% } %>
           </select>
         </div>
         <div class="from-group mb-2">
