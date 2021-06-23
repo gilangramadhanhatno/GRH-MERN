@@ -151,6 +151,13 @@ module.exports = {
     }
   },
 
+  // Item
+  viewItem: (req, res) => {
+    res.render("admin/item/view_item", {
+      title: "SetiawanStore | Item",
+    });
+  },
+
   // Booking
   viewBooking: (req, res) => {
     res.render("admin/booking/view_booking", {
