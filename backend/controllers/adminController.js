@@ -1,4 +1,5 @@
 const Category = require("../models/Category");
+const Bank = require("../models/Bank");
 
 module.exports = {
   viewDashboard: (req, res) => {
@@ -6,6 +7,8 @@ module.exports = {
       title: "SetiawanStore | Dashboard",
     });
   },
+
+  // Category
   viewCategory: async (req, res) => {
     try {
       const category = await Category.find();
@@ -29,7 +32,7 @@ module.exports = {
       req.flash("alertStatus", "success");
       res.redirect("/admin/category");
     } catch (error) {
-      req.flash("alertMessage", "$error.message");
+      req.flash("alertMessage", `${error.message}`);
       req.flash("alertStatus", "danger");
       res.redirect("/admin/category");
     }
@@ -44,7 +47,7 @@ module.exports = {
       req.flash("alertStatus", "success");
       res.redirect("/admin/category");
     } catch (error) {
-      req.flash("alertMessage", "$error.message");
+      req.flash("alertMessage", `${error.message}`);
       req.flash("alertStatus", "danger");
       res.redirect("/admin/category");
     }
@@ -58,17 +61,48 @@ module.exports = {
       req.flash("alertStatus", "success");
       res.redirect("/admin/category");
     } catch (error) {
-      req.flash("alertMessage", "$error.message");
+      req.flash("alertMessage", `${error.message}`);
       req.flash("alertStatus", "danger");
       res.redirect("/admin/category");
     }
   },
 
+  // Bank
   viewBank: (req, res) => {
-    res.render("admin/bank/view_bank", {
-      title: "SetiawanStore | Bank",
-    });
+    try {
+      const alertMessage = req.flash("alertMessage");
+      const alertStatus = req.flash("alertStatus");
+      const alert = { message: alertMessage, status: alertStatus };
+      res.render("admin/bank/view_bank", {
+        alert,
+        title: "SetiawanStore | Bank",
+      });
+    } catch (error) {
+      req.flash("alertMessage", `${error.message}`);
+      req.flash("alertStatus", "danger");
+      res.redirect("/admin/bank");
+    }
   },
+  addBank: async (req, res) => {
+    try {
+      const { nameBank, nomorRekening, name } = req.body;
+      await Bank.create({
+        nameBank,
+        nomorRekening,
+        name,
+        imageUrl: `images/${req.file.filename}`,
+      });
+      req.flash("alertMessage", "Success Add Bank");
+      req.flash("alertStatus", "success");
+      res.redirect("/admin/bank");
+    } catch (error) {
+      req.flash("alertMessage", `${error.message}`);
+      req.flash("alertStatus", "danger");
+      res.redirect("/admin/bank");
+    }
+  },
+
+  // Booking
   viewBooking: (req, res) => {
     res.render("admin/booking/view_booking", {
       title: "SetiawanStore | Booking",
