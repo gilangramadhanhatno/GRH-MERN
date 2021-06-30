@@ -3,9 +3,16 @@ const adminController = require("../controllers/adminController");
 const { upload, uploadMultiple } = require("../middlewares/multer");
 const auth = require("../middlewares/auth");
 
+// Endpoint Signin
 router.get("/signin", adminController.viewSignin);
 router.post("/signin", adminController.actionSignin);
+
 router.use(auth);
+
+// Endpoint Logout
+router.get("/logout", adminController.actionLogout);
+
+// Endpoint Dashboard
 router.get("/dashboard", adminController.viewDashboard);
 
 // Endpoint Category

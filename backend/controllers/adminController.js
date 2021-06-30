@@ -9,6 +9,7 @@ const path = require("path");
 const bcrypt = require("bcryptjs");
 
 module.exports = {
+  // SignIn
   viewSignin: async (req, res) => {
     try {
       const alertMessage = req.flash("alertMessage");
@@ -53,10 +54,20 @@ module.exports = {
     }
   },
 
+  // Logout
+  actionLogout: (req, res) => {
+    req.session.destroy();
+    res.redirect("/admin/signin");
+  },
+
+  // Dashboard
   viewDashboard: (req, res) => {
-    res.render("admin/dashboard/view_dashboard", {
-      title: "SetiawanStore | Dashboard",
-    });
+    try {
+      res.render("admin/dashboard/view_dashboard", {
+        title: "SetiawanStore | Dashboard",
+        user: req.session.user,
+      });
+    } catch (error) {}
   },
 
   // Category
@@ -70,6 +81,7 @@ module.exports = {
         category,
         alert,
         title: "SetiawanStore | Category",
+        user: req.session.user,
       });
     } catch (error) {
       res.redirect("/admin/category");
@@ -129,6 +141,7 @@ module.exports = {
         bank,
         alert,
         title: "SetiawanStore | Bank",
+        user: req.session.user,
       });
     } catch (error) {
       req.flash("alertMessage", `${error.message}`);
@@ -213,6 +226,7 @@ module.exports = {
         alert,
         item,
         action: "view",
+        user: req.session.user,
       });
     } catch (error) {
       req.flash("alertMessage", `${error.message}`);
@@ -257,6 +271,7 @@ module.exports = {
         alert,
         item,
         action: "show image",
+        user: req.session.user,
       });
     } catch (error) {
       req.flash("alertMessage", `${error.message}`);
@@ -278,6 +293,7 @@ module.exports = {
         item,
         category,
         action: "edit",
+        user: req.session.user,
       });
     } catch (error) {
       req.flash("alertMessage", `${error.message}`);
@@ -351,6 +367,7 @@ module.exports = {
   viewBooking: (req, res) => {
     res.render("admin/booking/view_booking", {
       title: "SetiawanStore | Booking",
+      user: req.session.user,
     });
   },
 };
