@@ -8,7 +8,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 // import mongoose
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/db_setiawanstore", {
+mongoose.connect("mongodb://127.0.0.1:27017/db_setiawan_store", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
