@@ -33,7 +33,7 @@ export default class Checkout extends Component {
 
   componentDidMount() {
     window.scroll(0, 0);
-    document.title = "GRH | Checkout";
+    document.title = "SetiawanStore | Checkout";
   }
 
   render() {

@@ -73,6 +73,21 @@ a {
 header {
   border-bottom: 1px solid #cccccc;
   background-color: #f6edea;
+  .navbar {
+    .navbar-nav {
+      li.nav-item {
+        a {
+          &.nav-link {
+            padding-left: 1rem;
+            padding-right: 1rem;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 // Hero

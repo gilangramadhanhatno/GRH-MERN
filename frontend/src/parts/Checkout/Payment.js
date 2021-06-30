@@ -28,7 +28,7 @@ export default function Payment(props) {
               <dl>
                 <dd>Bank Central Asia</dd>
                 <dd>1301 1999</dd>
-                <dd>Gilang Ramadhan Hatno</dd>
+                <dd>Setiawan</dd>
               </dl>
             </div>
           </div>
@@ -41,7 +41,7 @@ export default function Payment(props) {
               <dl>
                 <dd>Bank Mandiri</dd>
                 <dd>1301 1999</dd>
-                <dd>Gilang Ramadhan Hatno</dd>
+                <dd>Setiawan</dd>
               </dl>
             </div>
           </div>
