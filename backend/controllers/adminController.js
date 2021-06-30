@@ -14,10 +14,14 @@ module.exports = {
       const alertMessage = req.flash("alertMessage");
       const alertStatus = req.flash("alertStatus");
       const alert = { message: alertMessage, status: alertStatus };
-      res.render("index", {
-        alert,
-        title: "SetiawanStore | Login",
-      });
+      if (req.session.user == null || req.session.user == undefined) {
+        res.render("index", {
+          alert,
+          title: "SetiawanStore | Login",
+        });
+      } else {
+        res.redirect("/admin/dashboard");
+      }
     } catch (error) {
       res.redirect("/admin/signin");
     }
@@ -37,6 +41,11 @@ module.exports = {
         req.flash("alertStatus", "danger");
         res.redirect("/admin/signin");
       }
+
+      req.session.user = {
+        id: user.id,
+        username: user.username,
+      };
 
       res.redirect("/admin/dashboard");
     } catch (error) {
