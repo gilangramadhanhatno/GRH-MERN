@@ -35,6 +35,8 @@ router.get("/item/:id", adminController.showEditItem);
 router.put("/item/:id", uploadMultiple, adminController.editItem);
 router.delete("/item/:id/delete", adminController.deleteItem);
 
+// Endpoint Booking
 router.get("/booking", adminController.viewBooking);
+router.get("/booking/:id", adminController.showDetailBooking);
 
 module.exports = router;
