@@ -3,6 +3,8 @@ const Bank = require("../models/Bank");
 const Item = require("../models/Item");
 const Image = require("../models/Image");
 const Users = require("../models/Users");
+const Booking = require("../models/Booking");
+const Member = require("../models/Member");
 
 const fs = require("fs-extra");
 const path = require("path");
@@ -364,10 +366,16 @@ module.exports = {
   },
 
   // Booking
-  viewBooking: (req, res) => {
-    res.render("admin/booking/view_booking", {
-      title: "SetiawanStore | Booking",
-      user: req.session.user,
-    });
+  viewBooking: async (req, res) => {
+    try {
+      const booking = await Booking.find().populate("memberId").populate("bankId");
+
+      console.log(booking);
+      res.render("admin/booking/view_booking", {
+        title: "SetiawanStore | Booking",
+        user: req.session.user,
+        booking,
+      });
+    } catch (error) {}
   },
 };
