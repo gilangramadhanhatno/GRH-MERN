@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "parts/Header";
 import Hero from "parts/Hero";
-import Product from "parts/Product";
+import Categories from "parts/Categories";
 import Brands from "parts/Brands";
 import Footer from "parts/Footer";
 
@@ -23,7 +23,7 @@ export default class LandingPage extends Component {
       <>
         <Header {...this.props} />
         <Hero refProduct={this.refProduct} />
-        <Product refProduct={this.refProduct} data={landingPage.product} />
+        <Categories refProduct={this.refProduct} data={landingPage.categories} />
         <Brands data={landingPage.brand} />
         <Footer />
       </>

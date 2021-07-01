@@ -1,28 +1,64 @@
 {
-  "product": [
+  "categories": [
     {
       "_id": "asd1293uasdads1",
-      "name": "White Pure",
-      "imageUrl": "images/product/product-1.jpg",
-      "price": 59
-    },
-    {
-      "_id": "asd1293uasdads2",
       "name": "Kebaya",
-      "imageUrl": "images/product/product-2.jpg",
-      "price": 49
+      "items": [
+        {
+          "_id": "asd1293uasdads1",
+          "name": "White Pure",
+          "imageUrl": "/images/product/product-1.jpg",
+          "price": 59
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Maxmara",
+          "imageUrl": "/images/product/product-1.jpg",
+          "price": 59
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Soraya Kebaya",
+          "imageUrl": "/images/product/product-1.jpg",
+          "price": 59
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Dhievine Batik",
+          "imageUrl": "/images/product/product-1.jpg",
+          "price": 59
+        }
+      ]
     },
     {
-      "_id": "asd1293uasdads3",
-      "name": "Maxmara",
-      "imageUrl": "images/product/product-3.jpg",
-      "price": 65
-    },
-    {
-      "_id": "asd1293uasdads4",
-      "name": "Baju Kurung",
-      "imageUrl": "images/product/product-4.jpg",
-      "price": 89
+      "_id": "asd1293uasdads1",
+      "name": "Gamis",
+      "items": [
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Sabyan Gamis",
+          "imageUrl": "/images/product/product-1.jpg",
+          "price": 59
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Gamis Brokat",
+          "imageUrl": "/images/product/product-1.jpg",
+          "price": 59
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Gamis Etnic",
+          "imageUrl": "/images/product/product-1.jpg",
+          "price": 59
+        },
+        {
+          "_id": "asd1293uasdads1",
+          "name": "Shafiqa Longdress",
+          "imageUrl": "/images/product/product-1.jpg",
+          "price": 59
+        }
+      ]
     }
   ],
   "brand": [

@@ -157,7 +157,7 @@ section {
   width: 100%;
 }
 
-// Product
+// Categories
 .card {
   &.bordered {
     border: 1px solid $gray-300;
@@ -200,6 +200,15 @@ section {
     margin-bottom: 0;
     border-radius: 0.9375rem;
     overflow: hidden;
+    z-index: 1;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: scale(1.1);
+    transition: all 0.25s transfrom ease-in-out;
   }
 
   &.card-featured {
@@ -217,18 +226,6 @@ section {
       transform: scale(1.1);
       transition: 0.5s transfrom ease-in-out;
       z-index: -1;
-    }
-
-    .img-wrapper {
-      z-index: 1;
-      margin: 0;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      transform: scale(1.1);
-      transition: all 0.25s transfrom ease-in-out;
     }
 
     &:hover {
