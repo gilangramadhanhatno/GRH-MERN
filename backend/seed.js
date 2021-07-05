@@ -1,4 +1,4 @@
-const seeder = require("mongoose-seed");
+var seeder = require("mongoose-seed");
 var mongoose = require("mongoose");
 
 // Connect to MongoDB via Mongoose
@@ -61,7 +61,6 @@ var data = [
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902222"),
         title: "White Pure",
         price: 59,
-        sumBooking: 1,
         imageId: [
           // done
           { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cdb1") },
@@ -74,10 +73,9 @@ var data = [
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902223"),
         title: "Maxmara",
         price: 129,
-        sumBooking: 2,
         imageId: [
           // done
-          { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cdb4") },
+          { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cdb2") },
         ],
         categoryId: "5e96cbe292b97300fc901111",
       },
@@ -87,10 +85,9 @@ var data = [
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902224"),
         title: "Soraya Kebaya",
         price: 119,
-        sumBooking: 3,
         imageId: [
           // done
-          { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cdb7") },
+          { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cdb3") },
         ],
         categoryId: "5e96cbe292b97300fc901111",
       },
@@ -100,10 +97,9 @@ var data = [
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902225"),
         title: "Dhievine Batik",
         price: 99,
-        sumBooking: 4,
         imageId: [
           // done
-          { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cd10") },
+          { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cdb4") },
         ],
         categoryId: "5e96cbe292b97300fc901111",
       },
@@ -113,10 +109,9 @@ var data = [
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902226"),
         title: "Sabyan Gamis",
         price: 89,
-        sumBooking: 5,
         imageId: [
           // done
-          { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cd13") },
+          { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cdb5") },
         ],
         categoryId: "5e96cbe292b97300fc901112",
       },
@@ -126,10 +121,9 @@ var data = [
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902227"),
         title: "Gamis Brokat",
         price: 109,
-        sumBooking: 6,
         imageId: [
           // done
-          { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cd16") },
+          { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cdb6") },
         ],
         categoryId: "5e96cbe292b97300fc901112",
       },
@@ -139,10 +133,9 @@ var data = [
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902228"),
         title: "Gamis Etnic",
         price: 75,
-        sumBooking: 7,
         imageId: [
           // done
-          { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cd19") },
+          { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cdb7") },
         ],
         categoryId: "5e96cbe292b97300fc901112",
       },
@@ -152,10 +145,9 @@ var data = [
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902229"),
         title: "Shafiqa Longdress",
         price: 79,
-        sumBooking: 8,
         imageId: [
           // done
-          { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cd22") },
+          { _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cdb8") },
         ],
         categoryId: "5e96cbe292b97300fc901112",
       },
@@ -211,7 +203,7 @@ var data = [
     documents: [
       {
         _id: mongoose.Types.ObjectId("5e96cbe292b97300fc90cee1"),
-        bookingSelectDate: "12-12-2020",
+        bookingSelectDate: "07-14-2021",
         invoice: 1231231,
         itemId: {
           _id: mongoose.Types.ObjectId("5e96cbe292b97300fc902222"),
