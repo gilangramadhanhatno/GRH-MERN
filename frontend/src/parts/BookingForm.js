@@ -17,7 +17,7 @@ class BookingForm extends Component {
           selectDate: new Date(),
           key: "selection",
         },
-        selectBahan: "Select Bahan",
+        selectBahan: "Catton",
       },
     };
   }
@@ -40,8 +40,8 @@ class BookingForm extends Component {
       date: {
         selectDate: data.date.selectDate,
       },
+      selectBahan: data.selectBahan,
     });
-    this.props.history.push("/checkout");
   };
 
   render() {
@@ -56,8 +56,8 @@ class BookingForm extends Component {
           ${itemDetails.price} <span className="font-weight-light">per Baju</span>
         </h5>
 
-        <label htmlFor="bahan">Pilih Bahan</label>
-        <SelectBahan name="bahan" value={data.selectBahan} onChange={this.updateData} />
+        <label htmlFor="selectBahan">Pilih Bahan</label>
+        <SelectBahan name="selectBahan" value={data.selectBahan} onChange={this.updateData} />
 
         <label htmlFor="date" className="mt-2">
           Pilih Tanggal Janji
@@ -79,7 +79,7 @@ class BookingForm extends Component {
           </p>
         </h6>
 
-        <Button className="btn" onClick={startBooking}>
+        <Button className="btn" onClick={this.startBooking}>
           Continue to Book
         </Button>
       </div>
