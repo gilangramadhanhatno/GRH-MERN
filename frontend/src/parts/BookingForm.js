@@ -42,11 +42,12 @@ class BookingForm extends Component {
       },
       selectBahan: data.selectBahan,
     });
+    this.props.history.push("/checkout");
   };
 
   render() {
     const { data } = this.state;
-    const { itemDetails, startBooking } = this.props;
+    const { itemDetails } = this.props;
 
     return (
       <div className="form-booking card bordered" style={{ padding: "60px 80px" }}>
