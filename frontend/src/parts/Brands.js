@@ -9,7 +9,7 @@ export default function Brands(props) {
         {props.data.map((brand, index) => {
           return (
             <div key={`brand-${index}`} className="brand item column-3 mt-5">
-              <img src={brand.imageUrl} alt={brand.name} />
+              <img src={`${process.env.REACT_APP_HOST}/${brand.imageUrl}`} alt={brand.name} />
             </div>
           );
         })}

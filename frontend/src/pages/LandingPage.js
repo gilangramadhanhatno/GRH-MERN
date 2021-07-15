@@ -1,13 +1,15 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
 import Header from "parts/Header";
 import Hero from "parts/Hero";
 import Categories from "parts/Categories";
 import Brands from "parts/Brands";
 import Footer from "parts/Footer";
 
-import landingPage from "json/landingPage.json";
+import { fetchPage } from "store/actions/page";
 
-export default class LandingPage extends Component {
+class LandingPage extends Component {
   constructor(props) {
     super(props);
     this.refProduct = React.createRef();
@@ -16,17 +18,29 @@ export default class LandingPage extends Component {
   componentDidMount() {
     window.title = "GRH | Home";
     window.scrollTo(0, 0);
+
+    if (!this.props.page.landingPage) this.props.fetchPage(`${process.env.REACT_APP_HOST}/api/v1/member/landing-page`, "landingPage");
   }
 
   render() {
+    const { page } = this.props;
+
+    if (!page.hasOwnProperty("landingPage")) return null;
+
     return (
       <>
         <Header {...this.props} />
         <Hero refProduct={this.refProduct} />
-        <Categories refProduct={this.refProduct} data={landingPage.categories} />
-        <Brands data={landingPage.brand} />
+        <Categories refProduct={this.refProduct} data={page.landingPage.category} />
+        <Brands data={page.landingPage.brand} />
         <Footer />
       </>
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  page: state.page,
+});
+
+export default connect(mapStateToProps, { fetchPage })(LandingPage);
