@@ -11,7 +11,7 @@ export default function BookingInformation(props) {
         <div className="col-5 border-right py-5" style={{ paddingRight: 80 }}>
           <div className="card card-bordered">
             <figure className="img-wrapper" style={{ height: 540 }}>
-              <img className="img-cover" src={ItemDetails.imageUrls[0].url} alt={ItemDetails.name} />
+              <img className="img-cover" src={`${process.env.REACT_APP_HOST}/${ItemDetails.imageId[0].imageUrl}`} alt={ItemDetails.name} />
             </figure>
             <div className="row align-items-center">
               <div className="col">
@@ -21,8 +21,8 @@ export default function BookingInformation(props) {
                 </div>
               </div>
               <div className="col-auto">
-                <h5 className="text-gray-700">{ItemDetails.jenisBahan[0].bahan}</h5>
-                <span className="text-gray-900">${+checkout.duration * ItemDetails.price} USD</span>
+                {/* <h5 className="text-gray-700">{ItemDetails.jenisBahan[0].bahan}</h5> */}
+                <span className="text-gray-900">${+checkout.buy * ItemDetails.price} USD</span>
               </div>
               {/* <div className="col text-center">Geblek</div> */}
             </div>

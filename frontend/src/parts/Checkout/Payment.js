@@ -9,7 +9,7 @@ export default function Payment(props) {
   const { data, ItemDetails, checkout } = props;
 
   const dp = 50;
-  const subTotal = ItemDetails.price * checkout.duration;
+  const subTotal = ItemDetails.price * checkout.buy;
   const grandTotal = (dp / 100) * subTotal;
 
   return (

@@ -40,16 +40,16 @@ class Checkout extends Component {
 
   render() {
     const { data } = this.state;
-    const { checkout } = this.props;
+    const { checkout, page } = this.props;
 
     if (!checkout)
       return (
         <div className="container">
           <div className="row align-items-center justify-content-center text-center" style={{ height: "100vh" }}>
             <div className="col-3">
-              Pilih Kamar Dulu
+              Pilih Design Pakaian Dulu
               <div>
-                <Button className="btn mt-5" type="link" href="/" isPrimary>
+                <Button className="btn mt-5" type="button" onClick={() => this.props.history.goBack()} isPrimary>
                   Back
                 </Button>
               </div>
@@ -62,12 +62,12 @@ class Checkout extends Component {
       bookingInformation: {
         title: "Booking Information",
         description: "Please fill up the blank fields below",
-        content: <BookingInformation data={data} checkout={checkout} ItemDetails={ItemDetails} onChange={this.onChange} />,
+        content: <BookingInformation data={data} checkout={checkout} ItemDetails={page[checkout._id]} onChange={this.onChange} />,
       },
       payment: {
         title: "Payment",
         description: "Kindly follow the instructions below",
-        content: <Payment data={data} checkout={checkout} ItemDetails={ItemDetails} onChange={this.onChange} />,
+        content: <Payment data={data} checkout={checkout} ItemDetails={page[checkout._id]} onChange={this.onChange} />,
       },
       completed: {
         title: "Yeay, Completed",
@@ -95,7 +95,7 @@ class Checkout extends Component {
                         Continue to Book
                       </Button>
                     )}
-                    <Button className="btn" type="link" isBlock isLight href={`/details/${ItemDetails._id}`}>
+                    <Button className="btn" type="button" isBlock isLight onClick={() => this.props.history.goBack()}>
                       Cancel
                     </Button>
                   </Controller>
