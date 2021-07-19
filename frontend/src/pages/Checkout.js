@@ -11,6 +11,8 @@ import Completed from "parts/Checkout/Completed";
 
 import ItemDetails from "json/itemDetails.json";
 
+import { submitBooking } from "store/actions/checkout";
+
 class Checkout extends Component {
   state = {
     data: {
@@ -37,6 +39,32 @@ class Checkout extends Component {
     window.scroll(0, 0);
     document.title = "SetiawanStore | Checkout";
   }
+
+  _Submit = (nextStep) => {
+    const { data } = this.state;
+    const { checkout } = this.props;
+    const payload = new FormData();
+    payload.append("firstName", data.firstName);
+    payload.append("lastName", data.lastName);
+    payload.append("email", data.email);
+    payload.append("phoneNumber", data.phone);
+    payload.append("itemId", checkout._id);
+    payload.append("buy", checkout.buy);
+    payload.append("bookingSelectDate", checkout.date.selectDate);
+    payload.append("accountHolder", data.bankHolder);
+    payload.append("bankFrom", data.bankName);
+    payload.append("image", data.proofPayment[0]);
+    // payload.append("bankId", checkout.bankId);
+
+    this.props
+      .submitBooking(payload)
+      .then(() => {
+        nextStep();
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   render() {
     const { data } = this.state;
@@ -104,7 +132,7 @@ class Checkout extends Component {
                 {CurrentStep === "payment" && (
                   <Controller>
                     {data.proofPayment !== "" && data.bankName !== "" && data.bankHolder !== "" && (
-                      <Button className="btn mb-3" type="button" isBlock isPrimary hasShadow onClick={nextStep}>
+                      <Button className="btn mb-3" type="button" isBlock isPrimary hasShadow onClick={() => this._Submit(nextStep)}>
                         Continue to Book
                       </Button>
                     )}
@@ -135,4 +163,4 @@ const mapStateToProps = (state) => ({
   page: state.page,
 });
 
-export default connect(mapStateToProps)(Checkout);
+export default connect(mapStateToProps, { submitBooking })(Checkout);
