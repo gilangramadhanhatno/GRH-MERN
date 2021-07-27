@@ -1,10 +1,12 @@
 import React from "react";
-import "assets/scss/style.scss";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import LandingPage from "pages/LandingPage";
 import DetailsPage from "pages/DetailsPage";
 import Checkout from "pages/Checkout";
 import Example from "pages/Example";
+
+import "assets/scss/style.scss";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/checkout" component={Checkout} />
         <Route path="/Example" component={Example} />
       </Router>
+
+      <ToastContainer></ToastContainer>
     </div>
   );
 }
