@@ -2,6 +2,8 @@ import React from "react";
 import BrandIcon from "parts/IconText";
 import Button from "elements/Button";
 
+import LogoKebayaKoe from "assets/images/logo-kebayakoe-removebg.png";
+
 export default function Header(props) {
   const getNavLinkClass = (path) => {
     return props.location.pathname === path ? " active" : "";
@@ -13,7 +15,7 @@ export default function Header(props) {
         <div className="container">
           <nav className="navbar navbar-expand-lg">
             <Button className="brand-text-icon mx-auto" href="/" type="link">
-              SetiawanStore
+              <img src={LogoKebayaKoe} alt="" />
             </Button>
           </nav>
         </div>

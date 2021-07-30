@@ -67,8 +67,8 @@ export default function Footer() {
                 </Button>
               </li>
               <li className="list-group-item">
-                <Button type="link" href="/mailto:gilangramadhanhatno@gmail.com">
-                  gilangramadhanhatno@gmail.com
+                <Button type="link" href="/mailto:kebayakoe@gmail.com">
+                  kebayakoe@gmail.com
                 </Button>
               </li>
               <li className="list-group-item">

@@ -37,7 +37,7 @@ class Checkout extends Component {
 
   componentDidMount() {
     window.scroll(0, 0);
-    document.title = "SetiawanStore | Checkout";
+    document.title = "KebayaKoe | Checkout";
   }
 
   _Submit = (nextStep) => {
